@@ -1,0 +1,1120 @@
+/* Food Delivery Style Cart (Swiggy/Zomato Style) */
+.food-cart-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    background-color: #f5f5f5;
+    position: relative;
+    z-index: 60;
+}
+
+.food-cart-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 65;
+}
+
+.food-cart-header h1 {
+    font-size: 2.4rem;
+    color: #333;
+    margin-left: 1.5rem;
+    flex: 1;
+}
+
+.back-button {
+    font-size: 1.8rem;
+    color: #333;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 70;
+}
+
+.food-cart-toggle-btn {
+    padding: 0.8rem 1.2rem;
+    background-color: #c49b63;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 70;
+}
+
+.food-cart-toggle-btn:hover {
+    background-color: #a37d4e;
+}
+
+.food-cart-toggle-btn svg {
+    font-size: 1.2rem;
+}
+
+.food-cart-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.food-cart-left {
+    flex: 2;
+}
+
+.food-cart-right {
+    flex: 1;
+}
+
+.food-cart-section {
+    background-color: #fff;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.section-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.section-header h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin: 0;
+}
+
+.delivery-option {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+
+.delivery-option:hover {
+    background-color: #f9f9f9;
+}
+
+.delivery-option:last-child {
+    border-bottom: none;
+}
+
+.delivery-option-icon {
+    width: 4rem;
+    height: 4rem;
+    background-color: #f8f9fa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.5rem;
+}
+
+.delivery-option-icon svg {
+    font-size: 1.8rem;
+    color: #c49b63;
+}
+
+.delivery-option-content {
+    flex: 1;
+}
+
+.delivery-option-content h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin: 0 0 0.5rem 0;
+}
+
+.delivery-option-content p {
+    font-size: 1.4rem;
+    color: #666;
+    margin: 0;
+}
+
+.chevron-icon {
+    color: #999;
+    font-size: 1.4rem;
+}
+
+.cart-items {
+    padding: 0 1.5rem;
+}
+
+.cart-item {
+    display: flex;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item-image {
+    width: 8rem;
+    height: 8rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    margin-right: 1.5rem;
+}
+
+.cart-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cart-item-details {
+    flex: 1;
+}
+
+.cart-item-name-remove {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.cart-item-name-remove h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin: 0;
+}
+
+.remove-item-btn {
+    background: none;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    font-size: 1.4rem;
+    padding: 0.3rem;
+}
+
+.remove-item-btn:hover {
+    color: #c49b63;
+}
+
+.cart-item-price-qty {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.item-price {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.cart-item-customizations {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.cart-item-size {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.cart-item-customizations span {
+    background-color: #f8f9fa;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+}
+
+.item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.qty-btn {
+    background-color: #f0f0f0;
+    border: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.qty-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.qty-btn svg {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.item-quantity span {
+    font-size: 1.4rem;
+    font-weight: 500;
+    min-width: 2rem;
+    text-align: center;
+}
+
+.coupon-option {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+
+.coupon-option:hover {
+    background-color: #f9f9f9;
+}
+
+.coupon-option-icon {
+    width: 4rem;
+    height: 4rem;
+    background-color: #f8f9fa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.5rem;
+}
+
+.coupon-option-icon svg {
+    font-size: 1.8rem;
+    color: #c49b63;
+}
+
+.coupon-option-content {
+    flex: 1;
+}
+
+.coupon-option-content h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin: 0 0 0.5rem 0;
+}
+
+.coupon-option-content p {
+    font-size: 1.4rem;
+    color: #666;
+    margin: 0;
+}
+
+.applied-coupon {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: rgba(196, 155, 99, 0.1);
+    border-radius: 0.5rem;
+    margin: 1.5rem;
+}
+
+.coupon-icon {
+    width: 4rem;
+    height: 4rem;
+    background-color: rgba(196, 155, 99, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.5rem;
+}
+
+.coupon-icon svg {
+    font-size: 1.8rem;
+    color: #c49b63;
+}
+
+.coupon-details {
+    flex: 1;
+}
+
+.coupon-details h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin: 0 0 0.5rem 0;
+}
+
+.coupon-details p {
+    font-size: 1.4rem;
+    color: #666;
+    margin: 0;
+}
+
+.remove-coupon-btn {
+    background: none;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    font-size: 1.4rem;
+    padding: 0.3rem;
+}
+
+.remove-coupon-btn:hover {
+    color: #c49b63;
+}
+
+.payment-section {
+    margin-bottom: 2rem;
+}
+
+.payment-options {
+    padding: 1.5rem;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.8rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.payment-option:last-child {
+    margin-bottom: 0;
+}
+
+.payment-option.selected {
+    border-color: #c49b63;
+    background-color: rgba(196, 155, 99, 0.05);
+}
+
+.payment-option svg {
+    font-size: 1.8rem;
+    color: #c49b63;
+    margin-right: 1.5rem;
+}
+
+.payment-option span {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.check-icon {
+    position: absolute;
+    right: 1.5rem;
+    color: #c49b63;
+}
+
+.order-summary-section {
+    padding-bottom: 2rem;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    font-size: 1.4rem;
+    color: #666;
+}
+
+.summary-row.total {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    border-top: 1px dashed #ddd;
+    padding-top: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.summary-row.discount {
+    color: #4caf50;
+}
+
+.delivery-time-estimate {
+    margin: 2rem 1.5rem;
+    padding: 1.2rem;
+    background-color: #f9f9f9;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.delivery-time-estimate svg {
+    font-size: 1.8rem;
+    color: #c49b63;
+    margin-right: 1rem;
+}
+
+.food-cart-checkout-btn {
+    width: calc(100% - 3rem);
+    margin: 0 1.5rem;
+    padding: 1.5rem;
+    background-color: #c49b63;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.food-cart-checkout-btn:hover {
+    background-color: #a37d4e;
+}
+
+.food-cart-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    width: 90%;
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    z-index: 1001;
+}
+
+.modal-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 10;
+}
+
+.modal-header h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin: 0;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: #c49b63;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.address-option {
+    display: flex;
+    align-items: flex-start;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.8rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.address-option.selected {
+    border-color: #c49b63;
+    background-color: rgba(196, 155, 99, 0.05);
+}
+
+.address-icon {
+    width: 4rem;
+    height: 4rem;
+    background-color: #f8f9fa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.5rem;
+}
+
+.address-icon svg {
+    font-size: 1.8rem;
+    color: #c49b63;
+}
+
+.address-details h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin: 0 0 0.5rem 0;
+}
+
+.address-details p {
+    font-size: 1.4rem;
+    color: #666;
+    margin: 0;
+}
+
+.default-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #f0f0f0;
+    color: #666;
+    font-size: 1.2rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 2rem;
+}
+
+.add-address-btn {
+    width: 100%;
+    padding: 1.2rem;
+    background-color: #fff;
+    border: 1px dashed #c49b63;
+    border-radius: 0.8rem;
+    color: #c49b63;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.add-address-btn:hover {
+    background-color: rgba(196, 155, 99, 0.05);
+}
+
+.time-slot-option {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.8rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.time-slot-option.selected {
+    border-color: #c49b63;
+    background-color: rgba(196, 155, 99, 0.05);
+}
+
+.time-slot-icon {
+    width: 4rem;
+    height: 4rem;
+    background-color: #f8f9fa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.5rem;
+}
+
+.time-slot-icon svg {
+    font-size: 1.8rem;
+    color: #c49b63;
+}
+
+.time-slot-details span {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.coupon-search {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.coupon-search input {
+    flex: 1;
+    padding: 1.2rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem 0 0 0.5rem;
+    font-size: 1.4rem;
+}
+
+.coupon-search input:focus {
+    outline: none;
+    border-color: #c49b63;
+}
+
+.apply-coupon-btn {
+    padding: 0 1.5rem;
+    background-color: #c49b63;
+    color: #fff;
+    border: none;
+    border-radius: 0 0.5rem 0.5rem 0;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.apply-coupon-btn:hover {
+    background-color: #a37d4e;
+}
+
+.apply-coupon-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.available-coupons h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.coupon-card {
+    border: 1px solid #ddd;
+    border-radius: 0.8rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    background-color: #fff;
+}
+
+.coupon-code {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #c49b63;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed #ddd;
+}
+
+.coupon-info {
+    margin-bottom: 1.5rem;
+}
+
+.coupon-description {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.coupon-min-order {
+    font-size: 1.3rem;
+    color: #666;
+}
+
+.coupon-apply-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: rgba(196, 155, 99, 0.1);
+    border: 1px solid #c49b63;
+    border-radius: 0.5rem;
+    color: #c49b63;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.coupon-apply-btn:hover {
+    background-color: #c49b63;
+    color: #fff;
+}
+
+.food-cart-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 2rem;
+    background-color: #fff;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.food-cart-empty-icon {
+    font-size: 5rem;
+    color: #ddd;
+    margin-bottom: 2rem;
+}
+
+.food-cart-empty h2 {
+    font-size: 2.4rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.food-cart-empty p {
+    font-size: 1.6rem;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.food-cart-btn {
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    background-color: #c49b63;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.food-cart-btn:hover {
+    background-color: #a37d4e;
+}
+
+@media (max-width: 992px) {
+    .food-cart-container {
+        flex-direction: column;
+    }
+
+    .food-cart-left,
+    .food-cart-right {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .food-cart-item {
+        flex-direction: column;
+    }
+
+    .food-cart-item-image {
+        width: 100%;
+        height: 15rem;
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .food-cart-item-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+/* Checkout Modal Styles */
+.checkout-modal {
+    max-width: 600px;
+    z-index: 1002;
+}
+
+.payment-form {
+    padding: 1rem 0;
+}
+
+.payment-method-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.payment-method-header svg {
+    font-size: 2rem;
+    color: #c49b63;
+    margin-right: 1.5rem;
+}
+
+.payment-method-header h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin: 0;
+}
+
+.card-payment-form .form-row {
+    margin-bottom: 1.5rem;
+}
+
+.form-row.two-columns {
+    display: flex;
+    gap: 2rem;
+}
+
+.form-row.two-columns .form-group {
+    flex: 1;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.4rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 1.2rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #c49b63;
+}
+
+.cod-info {
+    padding: 1.5rem;
+    background-color: rgba(196, 155, 99, 0.1);
+    border-radius: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.cod-info p {
+    font-size: 1.4rem;
+    color: #666;
+    margin: 0 0 1rem 0;
+}
+
+.cod-info p:last-child {
+    margin-bottom: 0;
+}
+
+.order-summary-compact {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 0.8rem;
+}
+
+.order-summary-compact h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin: 0 0 1.5rem 0;
+}
+
+.summary-compact-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    color: #666;
+}
+
+.summary-compact-row:last-child {
+    margin-bottom: 0;
+}
+
+.summary-compact-row.total {
+    font-weight: 600;
+    color: #333;
+    font-size: 1.6rem;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-top: 1px dashed #ddd;
+}
+
+.summary-compact-row.discount {
+    color: #4caf50;
+}
+
+.confirm-payment {
+    margin-top: 2rem;
+    text-align: center;
+    position: relative;
+    z-index: 80;
+}
+
+.confirm-payment-btn {
+    padding: 1.2rem 3rem;
+    background-color: #c49b63;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    position: relative;
+    z-index: 80;
+}
+
+.confirm-payment-btn:hover {
+    background-color: #a37d4e;
+}
+
+/* Payment Processing */
+.payment-processing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.processing-spinner {
+    font-size: 4rem;
+    color: #c49b63;
+    margin-bottom: 2rem;
+}
+
+.payment-processing h3 {
+    font-size: 2rem;
+    color: #333;
+    margin: 0 0 1rem 0;
+}
+
+.payment-processing p {
+    font-size: 1.4rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.processing-steps {
+    color: #c49b63;
+    font-weight: 500;
+}
+
+.processing-progress-container {
+    width: 100%;
+    height: 0.8rem;
+    background-color: #f0f0f0;
+    border-radius: 2rem;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.processing-progress-bar {
+    height: 100%;
+    background-color: #c49b63;
+    border-radius: 2rem;
+    transition: width 0.3s ease;
+}
+
+/* Payment Success */
+.payment-success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.success-icon {
+    font-size: 5rem;
+    color: #4caf50;
+    margin-bottom: 2rem;
+}
+
+.payment-success h3 {
+    font-size: 2rem;
+    color: #333;
+    margin: 0 0 1rem 0;
+}
+
+.payment-success p {
+    font-size: 1.4rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.order-details {
+    width: 100%;
+    background-color: #f9f9f9;
+    border-radius: 0.8rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.order-detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.order-detail-row:last-child {
+    border-bottom: none;
+}
+
+.order-detail-row span:first-child {
+    font-weight: 500;
+    color: #666;
+}
+
+.order-detail-row span:last-child {
+    color: #333;
+}
+
+.complete-order-btn {
+    padding: 1.2rem 4rem;
+    background-color: #c49b63;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.complete-order-btn:hover {
+    background-color: #a37d4e;
+}
+
+@media (max-width: 576px) {
+    .form-row.two-columns {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .payment-processing,
+    .payment-success {
+        padding: 2rem 1rem;
+    }
+
+    .processing-spinner,
+    .success-icon {
+        font-size: 3.5rem;
+    }
+}
+
+.food-cart-with-orders {
+    width: 100%;
+    position: relative;
+    z-index: 60;
+}
+
+@media (max-width: 768px) {
+    .food-cart-header {
+        flex-wrap: wrap;
+    }
+
+    .food-cart-toggle-btn {
+        margin-top: 1rem;
+        margin-left: auto;
+    }
+}

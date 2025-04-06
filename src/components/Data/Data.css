@@ -1,0 +1,66 @@
+.data {
+    width: 100%;
+    height: 50vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
+        url('https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGNvZmZlZSUyMGRlc3NlcnR8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=80') center no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.data>div {
+    width: 25rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.icon-wrapper {
+    width: 8rem;
+    height: 8rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.icon-bg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0.1rem solid #c49b63;
+    transition: all 0.3s;
+}
+
+.data svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    -webkit-text-stroke: 0.2rem #c49b63;
+    color: transparent;
+    transition: all 0.3s;
+    z-index: 100;
+}
+
+.icon-wrapper:hover .icon-bg {
+    background-color: #c49b63;
+    -webkit-text-stroke: 0.2rem #2a2727;
+    transform: rotateZ(135deg);
+}
+
+.icon-wrapper:hover svg {
+    -webkit-text-stroke: 0.2rem #2a2727;
+}
+
+.num {
+    font-size: 3rem;
+    color: #c49b63;
+}
+
+.info {
+    font-size: 1.8rem;
+    color: #999;
+}

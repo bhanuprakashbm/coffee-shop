@@ -1,0 +1,106 @@
+.contact {
+    width: 100%;
+    height: 60vh;
+    background-color: #000;
+    display: flex;
+}
+
+.contact-left {
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contact-right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-right h1 {
+    font-size: 4rem;
+    font-weight: 300;
+    color: #fff;
+    margin: 0 0 3rem 2rem;
+}
+
+.input-group {
+    display: flex;
+}
+
+.input-group input,
+textarea {
+    width: 30rem;
+    height: 5rem;
+    padding: 1rem 1rem 2rem 0;
+    margin: 2rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+
+.input-group textarea {
+    resize: none;
+    height: 5rem;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: #fff;
+}
+
+.contact-btn {
+    width: 30rem;
+    height: 6rem;
+    background-color: #c49b63;
+    color: #2a2727;
+    margin: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+    .contact-left {
+        display: none;
+    }
+
+    .contact-right {
+        width: 100%;
+    }
+
+    .input-group input,
+    textarea,
+    .contact-btn {
+        width: 40rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .contact {
+        height: 80%;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    .input-group input,
+    textarea,
+    .contact-btn {
+        width: 60rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .input-group input,
+    textarea,
+    .contact-btn {
+        width: 50rem;
+    }
+}

@@ -1,0 +1,10 @@
+I0405 21:15:08.428152    6724 load.go:37] Reloading schema and connectors...
+I0405 21:15:08.448575    6724 control.go:71] [/emulator/coffeeshop da12] UpdateResources(): done
+Schema: sources: schema\schema.gql [2088B] 
+Connector "default": sources: connector\mutations.gql [1233B] connector\queries.gql [1802B] 
+I0405 21:15:08.468323    6724 codegen.go:82] [connector "default" javascriptSdk] Generating sources into "C:\\Users\\bhanu\\Desktop\\coffeeshop\\dataconnect-generated\\js\\default-connector"
+I0405 21:15:08.475164    6724 collector.go:107] schema extensions wrote into "C:\\Users\\bhanu\\dataconnect\\.dataconnect\\schema"
+Generated sources: prelude.gql [67159B] 
+I0405 21:15:08.484106    6724 collector.go:107] connector "default" javascriptSdk wrote into "C:\\Users\\bhanu\\Desktop\\coffeeshop\\dataconnect-generated\\js\\default-connector"
+Generated sources: react\index.d.ts [228B] react\esm\index.esm.js [0B] react\README.md [5417B] index.d.ts [246B] README.md [2774B] index.cjs.js [148B] package.json [860B] react\package.json [468B] react\esm\package.json [17B] react\index.cjs.js [0B] esm\index.esm.js [113B] esm\package.json [17B] 
+I0405 21:15:08.507778    6724 installsdk.go:80] Running command: C:\Program Files\nodejs\npm.cmd install file:dataconnect-generated\js\default-connector
